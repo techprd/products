@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>frontend</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link th:each="link : ${staticFiles}" th:href="${link}" rel="prefetch"/>
+
+    <link href=/static/css/app.css rel=preload as=style>
+    <link href=/static/js/app.js rel=preload as=script>
+    <link href=/static/js/chunk-vendors.js rel=preload as=script>
+    <link href=/static/css/app.css rel=stylesheet>
+
+
+</head>
+<body>
+
+<noscript>
+    Your web browser does not support JavaScript or it is not currently enabled.
+    For the best experience we recommend you <a href="http://www.enable-javascript.com/">enable JavaScript</a> or change
+    to a JavaScript enabled web browser.
+</noscript>
+<div id="app"></div>
+<script src=/static/js/chunk-vendors.js></script>
+<script src=/static/js/app.js></script>
+
+</body>
 </html>
