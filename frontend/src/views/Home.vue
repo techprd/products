@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Products msg="Product List"/>
+    <Products pageTitle="Product List"/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
   @Component({
     components: {
       Products,
-    }
+    },
   })
   export default class Home extends Vue {
   }
